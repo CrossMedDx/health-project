@@ -159,7 +159,7 @@ def download_by_study_ids(base_url, csv_file, output_root, max_workers):
             images_dir.mkdir(parents=True, exist_ok=True)
             study_output_dir = images_dir / f"s{str(study_id)}"
             study_output_dir.mkdir(parents=True, exist_ok=True)
-            images_output_dir = study_output_dir /"report.txt"
+            images_output_dir = study_output_dir /"images"
             cmd_images = [
                 "wget",
                 "-r",

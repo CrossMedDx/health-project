@@ -125,9 +125,11 @@ def download_by_study_ids(base_url, csv_file, output_root, max_workers):
             report_url = (
                 f"{base_url}/files/p{str(subject_id)[:2]}/p{subject_id}/s{study_id}.txt"
             )
-            study_output_dir = output_root / f"s{str(study_id)}"
+            report_dir = output_root / "textData"
+            report_dir.mkdir(parents=True, exist_ok=True)
+            study_output_dir = report_dir / f"s{str(study_id)}"
             study_output_dir.mkdir(parents=True, exist_ok=True)
-            report_output_path = study_output_dir / "report.txt"
+            report_output_path = study_output_dir /"report.txt"
             cmd_report = [
                 "wget",
                 "-N",
@@ -153,8 +155,11 @@ def download_by_study_ids(base_url, csv_file, output_root, max_workers):
             images_url = (
                 f"{base_url}/files/p{str(subject_id)[:2]}/p{subject_id}/s{study_id}/"
             )
-            images_output_dir = study_output_dir / "images"
-            images_output_dir.mkdir(parents=True, exist_ok=True)
+            images_dir = output_root / "imageData"
+            images_dir.mkdir(parents=True, exist_ok=True)
+            study_output_dir = images_dir / f"s{str(study_id)}"
+            study_output_dir.mkdir(parents=True, exist_ok=True)
+            images_output_dir = study_output_dir /"report.txt"
             cmd_images = [
                 "wget",
                 "-r",

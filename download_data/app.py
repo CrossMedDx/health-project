@@ -109,11 +109,13 @@ def download_by_partition(
 
     print(f"Downloaded {len(selected)} patient directories to {output_root}")
 
+failed = []
 
 def download_by_study_ids(base_url, csv_file, output_root, max_workers):
     """
     Downloads specific study IDs based on a CSV file.
     """
+    global failed
     df = pd.read_csv(csv_file)
     semaphore = threading.Semaphore(max_workers)
     pbar = tqdm(total=len(df), desc="Downloading studies", unit="study")
@@ -156,6 +158,9 @@ def download_by_study_ids(base_url, csv_file, output_root, max_workers):
                 f"{base_url}/files/p{str(subject_id)[:2]}/p{subject_id}/s{study_id}/"
             )
             images_dir = output_root / "imageData"
+            # check if at least one .dcm file exists
+            if any(file.endswith(".dcm") for file in os.listdir(images_dir / f"s{str(study_id)}")):
+                return
             images_dir.mkdir(parents=True, exist_ok=True)
             study_output_dir = images_dir / f"s{str(study_id)}"
             study_output_dir.mkdir(parents=True, exist_ok=True)
@@ -185,6 +190,10 @@ def download_by_study_ids(base_url, csv_file, output_root, max_workers):
                 )
         except Exception as e:
             print(f"Error downloading study {study_id} for subject {subject_id}: {e}")
+            failed.append({
+                "subject_id": subject_id,
+                "study_id": study_id,
+            })
         finally:
             pbar.update(1)
             semaphore.release()
@@ -201,13 +210,30 @@ def download_by_study_ids(base_url, csv_file, output_root, max_workers):
         t.join()
     pbar.close()
 
+
+    # try once more to download the failed ones
+    if len(failed) > 0:
+        print(f"Failed list: {failed}")
+        failed_deep_copy = [i for i in failed]
+        failed = []
+        for item in failed_deep_copy:
+            subject_id = item["subject_id"]
+            study_id = item["study_id"]
+            semaphore.acquire()
+            t = threading.Thread(target=worker, args=(subject_id, study_id))
+            t.start()
+            threads.append(t)
+
+        for t in threads:
+            t.join()
+
     print(f"Downloaded {len(df)} studies to {output_root}")
 
 
 if __name__ == "__main__":
     # Configuration
     base_url = "https://physionet.org/files/mimic-cxr/2.1.0"
-    output_root = Path("./mimic-cxr-download")
+    output_root = Path("/mnt/e/ecs289l/mimic-cxr-download")
     max_workers = 50  # concurrency limit
 
     while True:

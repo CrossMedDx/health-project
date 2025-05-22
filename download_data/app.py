@@ -159,8 +159,11 @@ def download_by_study_ids(base_url, csv_file, output_root, max_workers):
             )
             images_dir = output_root / "imageData"
             # check if at least one .dcm file exists
-            if any(file.endswith(".dcm") for file in os.listdir(images_dir / f"s{str(study_id)}")):
-                return
+            try:
+                if any(file.endswith(".dcm") for file in os.listdir(images_dir / f"s{str(study_id)}")):
+                    return
+            except FileNotFoundError:
+                pass
             images_dir.mkdir(parents=True, exist_ok=True)
             study_output_dir = images_dir / f"s{str(study_id)}"
             study_output_dir.mkdir(parents=True, exist_ok=True)

@@ -176,6 +176,7 @@ cython_debug/
 # Dataset
 mimic-cxr-download/
 download_data/metadata/
+cached_data/
 
 # Models
 *.pth

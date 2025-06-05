@@ -28,6 +28,7 @@ print("finished imports")
 # ---------------------
 # Reproducibility
 # ---------------------
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 SEED = 42
 random.seed(SEED)
 np.random.seed(SEED)

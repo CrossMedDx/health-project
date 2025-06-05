@@ -34,14 +34,13 @@ np.random.seed(SEED)
 torch.manual_seed(SEED)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Using device:", device)
-cache_dir = "./cached_data"
+cache_dir = "/usr/home/sach12/fusion/cached_data"
 
 ########################################################################################################################################
 
 
 
 # Custom collate for batching
-model_name_vision = 'google/vit-base-patch16-224-in21k'
 def fusion_collate_fn(batch):
     pixel_values = torch.stack([item['pixel_values'] for item in batch])
     input_ids = torch.stack([item['input_ids'] for item in batch])
@@ -83,15 +82,12 @@ test_idx, val_idx, test_labels, val_labels = train_test_split(
 
 print("Train / Val / Test sizes:", len(train_idx), len(val_idx), len(test_idx))
 
-
-batch_size = 32
-
 train_ds = CachedFusionDataset(cache_dir, train_idx)
 val_ds = CachedFusionDataset(cache_dir, val_idx)
 test_ds = CachedFusionDataset(cache_dir, test_idx)
 
 def get_loader(ds, bs, shuffle=False):
-    return DataLoader(ds, batch_size=bs, shuffle=shuffle, collate_fn=fusion_collate_fn, num_workers=4, pin_memory=True, persistent_workers=True, prefetch_factor=2)
+    return DataLoader(ds, batch_size=bs, shuffle=shuffle, collate_fn=fusion_collate_fn, num_workers=4)
 
 ##################################################################################
 
@@ -148,9 +144,9 @@ def compute_metrics(y_true, y_pred, y_probs):
         spec = tn/(tn+fp) if (tn+fp)>0 else 0.0
         metrics[name] = {
             'accuracy': acc,
-            'precision': precision.to_list(),
-            'recall': recall.to_list(),
-            'f1': f1.to_list(),
+            'precision': precision.tolist(),
+            'recall': recall.tolist(),
+            'f1': f1.tolist(),
             'auroc': auroc,
             'auprc': auprc,
             'sensitivity': sens,
@@ -175,6 +171,7 @@ def train_epoch(model, loader, optimizer, criterion):
         loss.backward()
         optimizer.step()
         total_loss += loss.item()
+        torch.cuda.empty_cache()
     return total_loss / len(loader)
 
 def validate_epoch(model, loader, criterion):
@@ -190,6 +187,7 @@ def validate_epoch(model, loader, criterion):
             logits = model(pixel_values, input_ids, attention_mask)
             loss = criterion(logits, labels)
             total_loss += loss.item()
+            torch.cuda.empty_cache()
     avg_loss = total_loss / len(loader)
 
     return avg_loss
@@ -214,6 +212,7 @@ def evaluate(model, loader):
             all_labels.append(labels)
             all_preds.append(preds)
             all_probs.append(probs)
+            torch.cuda.empty_cache()
     y_true = np.vstack(all_labels)
     y_pred = np.vstack(all_preds)
     y_probs= np.vstack(all_probs)
@@ -229,7 +228,7 @@ for vision_drop in [0.1, 0.2]:
     for text_drop in [0.1, 0.2]:
         for lr in [1e-5, 5e-5, 2e-4]:
             for wd in [0, 0.01, 0.1]:
-                for bs in [16, 32]:
+                for bs in [16]:
                     hyperparameter_combinations.append({
                         'vision_drop': vision_drop,
                         'text_drop':   text_drop,
@@ -247,6 +246,10 @@ if not os.path.exists(results_file):
 # for combo in hyperparameter_combinations:
 def run_experiment(combo):
     name = f"CA_VD{combo['vision_drop']}_TD{combo['text_drop']}_LR{combo['learning_rate']}_WD{combo['weight_decay']}_BS{combo['batch_size']}_EP{combo['num_epochs']}"
+    with open(results_file, 'r') as f:
+        results = json.load(f)
+    if any(res['name'] == name for res in results):
+        return
     print(f"Running combo: {name}")
 
     train_loader = get_loader(train_ds, combo['batch_size'], shuffle=True)
@@ -304,15 +307,10 @@ def run_experiment(combo):
         json.dump(results, f, indent=4)
     print(f"Saved results for {name}\n")
 ###################################################
-combo = {
-    "vision_drop": 0.2,
-    "text_drop": 0.2,
-    "weight_decay": 0.01,
-    "learning_rate": 5e-05,
-    "batch_size": 32,
-    "num_epochs": 20,
-    "patience": 3
-}
-run_experiment(combo)
 
-
+for combo in hyperparameter_combinations:
+    try:
+        run_experiment(combo)
+    except Exception as e:
+        print(f"Failed: {e} for combo {combo}")
+print("All experiments completed.")

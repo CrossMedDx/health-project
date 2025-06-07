@@ -1,0 +1,1661 @@
+[
+    {
+        "name": "dp0.1_wd0_lr1e-05_bs16",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0,
+            "learning_rate": 1e-05,
+            "batch_size": 16,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8503649635036497,
+                "recall": 0.7491961414790996,
+                "f1": 0.7965811965811965,
+                "auroc": 0.9110881374853576,
+                "auprc": 0.8917649545507675,
+                "sensitivity": 0.7491961414790996,
+                "specificity": 0.8997555012224939
+            },
+            "effusion": {
+                "precision": 0.8381995133819952,
+                "recall": 0.9053876478318003,
+                "f1": 0.8704990524320909,
+                "auroc": 0.9324100720120607,
+                "auprc": 0.9384489346758536,
+                "sensitivity": 0.9053876478318003,
+                "specificity": 0.8041237113402062
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0_lr1e-05_bs32",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0,
+            "learning_rate": 1e-05,
+            "batch_size": 32,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8015384615384615,
+                "recall": 0.837620578778135,
+                "f1": 0.8191823899371069,
+                "auroc": 0.9127292667395185,
+                "auprc": 0.8874252686295385,
+                "sensitivity": 0.837620578778135,
+                "specificity": 0.8422982885085575
+            },
+            "effusion": {
+                "precision": 0.8531746031746031,
+                "recall": 0.8475689881734559,
+                "f1": 0.8503625576796309,
+                "auroc": 0.9269912660459553,
+                "auprc": 0.9279207322708914,
+                "sensitivity": 0.8475689881734559,
+                "specificity": 0.8365243004418262
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0_lr1e-05_bs64",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0,
+            "learning_rate": 1e-05,
+            "batch_size": 64,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7772861356932154,
+                "recall": 0.8472668810289389,
+                "f1": 0.8107692307692308,
+                "auroc": 0.9126280473903097,
+                "auprc": 0.8946176313447247,
+                "sensitivity": 0.8472668810289389,
+                "specificity": 0.815403422982885
+            },
+            "effusion": {
+                "precision": 0.8381995133819952,
+                "recall": 0.9053876478318003,
+                "f1": 0.8704990524320909,
+                "auroc": 0.9287156075158837,
+                "auprc": 0.9299832572618092,
+                "sensitivity": 0.9053876478318003,
+                "specificity": 0.8041237113402062
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0_lr5e-05_bs16",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0,
+            "learning_rate": 5e-05,
+            "batch_size": 16,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8108108108108109,
+                "recall": 0.7717041800643086,
+                "f1": 0.7907742998352554,
+                "auroc": 0.9024894063632576,
+                "auprc": 0.8701143291850439,
+                "sensitivity": 0.7717041800643086,
+                "specificity": 0.863080684596577
+            },
+            "effusion": {
+                "precision": 0.8536269430051814,
+                "recall": 0.8659658344283837,
+                "f1": 0.8597521200260926,
+                "auroc": 0.920850597713651,
+                "auprc": 0.9177657312421342,
+                "sensitivity": 0.8659658344283837,
+                "specificity": 0.833578792341679
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0_lr5e-05_bs32",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0,
+            "learning_rate": 5e-05,
+            "batch_size": 32,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8128,
+                "recall": 0.8167202572347267,
+                "f1": 0.8147554129911788,
+                "auroc": 0.9109348343933521,
+                "auprc": 0.886213888704434,
+                "sensitivity": 0.8167202572347267,
+                "specificity": 0.8569682151589242
+            },
+            "effusion": {
+                "precision": 0.8878923766816144,
+                "recall": 0.7805519053876478,
+                "f1": 0.8307692307692308,
+                "auroc": 0.9286033608208717,
+                "auprc": 0.9286035233797112,
+                "sensitivity": 0.7805519053876478,
+                "specificity": 0.8895434462444771
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0_lr5e-05_bs64",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0,
+            "learning_rate": 5e-05,
+            "batch_size": 64,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8648148148148148,
+                "recall": 0.7508038585209004,
+                "f1": 0.8037865748709122,
+                "auroc": 0.9172006069230105,
+                "auprc": 0.8968319348600273,
+                "sensitivity": 0.7508038585209004,
+                "specificity": 0.910757946210269
+            },
+            "effusion": {
+                "precision": 0.8901251738525731,
+                "recall": 0.8409986859395532,
+                "f1": 0.8648648648648649,
+                "auroc": 0.9369947689169548,
+                "auprc": 0.9415065567029717,
+                "sensitivity": 0.8409986859395532,
+                "specificity": 0.8836524300441826
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0_lr0.0002_bs16",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0,
+            "learning_rate": 0.0002,
+            "batch_size": 16,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8061749571183533,
+                "recall": 0.7556270096463023,
+                "f1": 0.7800829875518672,
+                "auroc": 0.8991973207336537,
+                "auprc": 0.8699331344487105,
+                "sensitivity": 0.7556270096463023,
+                "specificity": 0.8618581907090465
+            },
+            "effusion": {
+                "precision": 0.856508875739645,
+                "recall": 0.7608409986859396,
+                "f1": 0.8058455114822547,
+                "auroc": 0.9055869824798392,
+                "auprc": 0.9167555470072406,
+                "sensitivity": 0.7608409986859396,
+                "specificity": 0.8571428571428571
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0_lr0.0002_bs32",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0,
+            "learning_rate": 0.0002,
+            "batch_size": 32,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7812995245641838,
+                "recall": 0.792604501607717,
+                "f1": 0.7869114126097366,
+                "auroc": 0.8949716585822216,
+                "auprc": 0.8567741098371972,
+                "sensitivity": 0.792604501607717,
+                "specificity": 0.8312958435207825
+            },
+            "effusion": {
+                "precision": 0.8703448275862069,
+                "recall": 0.8291721419185283,
+                "f1": 0.8492597577388964,
+                "auroc": 0.9227162151962672,
+                "auprc": 0.9302622284749746,
+                "sensitivity": 0.8291721419185283,
+                "specificity": 0.8615611192930781
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0_lr0.0002_bs64",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0,
+            "learning_rate": 0.0002,
+            "batch_size": 64,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7918622848200313,
+                "recall": 0.8135048231511254,
+                "f1": 0.80253766851705,
+                "auroc": 0.9062728480569815,
+                "auprc": 0.8715897253768915,
+                "sensitivity": 0.8135048231511254,
+                "specificity": 0.8374083129584352
+            },
+            "effusion": {
+                "precision": 0.8362068965517241,
+                "recall": 0.8922470433639947,
+                "f1": 0.863318499682136,
+                "auroc": 0.9253056303329276,
+                "auprc": 0.9285128916444114,
+                "sensitivity": 0.8922470433639947,
+                "specificity": 0.8041237113402062
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.01_lr1e-05_bs16",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.01,
+            "learning_rate": 1e-05,
+            "batch_size": 16,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8175895765472313,
+                "recall": 0.8070739549839229,
+                "f1": 0.8122977346278317,
+                "auroc": 0.9137709415954528,
+                "auprc": 0.8874056507521622,
+                "sensitivity": 0.8070739549839229,
+                "specificity": 0.863080684596577
+            },
+            "effusion": {
+                "precision": 0.829683698296837,
+                "recall": 0.8961892247043364,
+                "f1": 0.8616550852811118,
+                "auroc": 0.9285278845949153,
+                "auprc": 0.9333265486902933,
+                "sensitivity": 0.8961892247043364,
+                "specificity": 0.7938144329896907
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.01_lr1e-05_bs32",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.01,
+            "learning_rate": 1e-05,
+            "batch_size": 32,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7527322404371585,
+                "recall": 0.8858520900321544,
+                "f1": 0.8138847858197932,
+                "auroc": 0.9152115975754526,
+                "auprc": 0.8884907926471903,
+                "sensitivity": 0.8858520900321544,
+                "specificity": 0.7787286063569682
+            },
+            "effusion": {
+                "precision": 0.8414634146341463,
+                "recall": 0.9067017082785808,
+                "f1": 0.872865275142315,
+                "auroc": 0.9296290633787416,
+                "auprc": 0.9293268815048569,
+                "sensitivity": 0.9067017082785808,
+                "specificity": 0.8085419734904271
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.01_lr1e-05_bs64",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.01,
+            "learning_rate": 1e-05,
+            "batch_size": 64,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8084772370486656,
+                "recall": 0.8279742765273312,
+                "f1": 0.818109610802224,
+                "auroc": 0.9134250269263123,
+                "auprc": 0.8911129132740896,
+                "sensitivity": 0.8279742765273312,
+                "specificity": 0.8508557457212714
+            },
+            "effusion": {
+                "precision": 0.8746594005449592,
+                "recall": 0.8436268068331143,
+                "f1": 0.8588628762541806,
+                "auroc": 0.928823983635206,
+                "auprc": 0.9323325681858332,
+                "sensitivity": 0.8436268068331143,
+                "specificity": 0.8645066273932254
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.01_lr5e-05_bs16",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.01,
+            "learning_rate": 5e-05,
+            "batch_size": 16,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8508946322067594,
+                "recall": 0.6881028938906752,
+                "f1": 0.7608888888888888,
+                "auroc": 0.902507095181566,
+                "auprc": 0.866143833638386,
+                "sensitivity": 0.6881028938906752,
+                "specificity": 0.9083129584352079
+            },
+            "effusion": {
+                "precision": 0.803921568627451,
+                "recall": 0.9159001314060446,
+                "f1": 0.8562653562653563,
+                "auroc": 0.922389151550456,
+                "auprc": 0.9310743405270472,
+                "sensitivity": 0.9159001314060446,
+                "specificity": 0.7496318114874816
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.01_lr5e-05_bs32",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.01,
+            "learning_rate": 5e-05,
+            "batch_size": 32,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8327272727272728,
+                "recall": 0.7363344051446945,
+                "f1": 0.7815699658703071,
+                "auroc": 0.9036647300686326,
+                "auprc": 0.8722729641617859,
+                "sensitivity": 0.7363344051446945,
+                "specificity": 0.8875305623471883
+            },
+            "effusion": {
+                "precision": 0.8204819277108434,
+                "recall": 0.8948751642575559,
+                "f1": 0.8560653676932747,
+                "auroc": 0.9252378952583512,
+                "auprc": 0.931752162653981,
+                "sensitivity": 0.8948751642575559,
+                "specificity": 0.780559646539028
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.01_lr5e-05_bs64",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.01,
+            "learning_rate": 5e-05,
+            "batch_size": 64,
+            "num_epochs": 20
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7909774436090226,
+                "recall": 0.8456591639871383,
+                "f1": 0.8174048174048174,
+                "auroc": 0.9125897216173083,
+                "auprc": 0.8833736412705535,
+                "sensitivity": 0.8456591639871383,
+                "specificity": 0.8300733496332519
+            },
+            "effusion": {
+                "precision": 0.8317535545023697,
+                "recall": 0.9224704336399474,
+                "f1": 0.874766355140187,
+                "auroc": 0.934074419558793,
+                "auprc": 0.9385732035461738,
+                "sensitivity": 0.9224704336399474,
+                "specificity": 0.7908689248895434
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.01_lr0.0002_bs16",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.01,
+            "learning_rate": 0.0002,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8106194690265487,
+                "recall": 0.7363344051446945,
+                "f1": 0.7716933445661331,
+                "auroc": 0.8811350718166024,
+                "auprc": 0.8578157711219438,
+                "sensitivity": 0.7363344051446945,
+                "specificity": 0.8691931540342298
+            },
+            "effusion": {
+                "precision": 0.8495440729483282,
+                "recall": 0.7345597897503285,
+                "f1": 0.7878787878787878,
+                "auroc": 0.8788354985978841,
+                "auprc": 0.892272735638818,
+                "sensitivity": 0.7345597897503285,
+                "specificity": 0.8541973490427098
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.01_lr0.0002_bs32",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.01,
+            "learning_rate": 0.0002,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8310679611650486,
+                "recall": 0.6881028938906752,
+                "f1": 0.752858399296394,
+                "auroc": 0.8908717835832043,
+                "auprc": 0.8601208773275815,
+                "sensitivity": 0.6881028938906752,
+                "specificity": 0.8936430317848411
+            },
+            "effusion": {
+                "precision": 0.8895800933125972,
+                "recall": 0.7516425755584757,
+                "f1": 0.8148148148148148,
+                "auroc": 0.9206280396114715,
+                "auprc": 0.9279553648726175,
+                "sensitivity": 0.7516425755584757,
+                "specificity": 0.8954344624447718
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.01_lr0.0002_bs64",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.01,
+            "learning_rate": 0.0002,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8015873015873016,
+                "recall": 0.8118971061093248,
+                "f1": 0.8067092651757188,
+                "auroc": 0.9104022044198462,
+                "auprc": 0.8826429050343529,
+                "sensitivity": 0.8118971061093248,
+                "specificity": 0.8471882640586798
+            },
+            "effusion": {
+                "precision": 0.8697421981004071,
+                "recall": 0.8423127463863338,
+                "f1": 0.855807743658211,
+                "auroc": 0.9244792624230965,
+                "auprc": 0.931846154401874,
+                "sensitivity": 0.8423127463863338,
+                "specificity": 0.8586156111929307
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.1_lr1e-05_bs16",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.1,
+            "learning_rate": 1e-05,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7959501557632399,
+                "recall": 0.8215434083601286,
+                "f1": 0.8085443037974683,
+                "auroc": 0.9103727230559988,
+                "auprc": 0.8876418609646426,
+                "sensitivity": 0.8215434083601286,
+                "specificity": 0.8398533007334963
+            },
+            "effusion": {
+                "precision": 0.8588235294117647,
+                "recall": 0.8633377135348226,
+                "f1": 0.8610747051114024,
+                "auroc": 0.9309876354459581,
+                "auprc": 0.9345789992459103,
+                "sensitivity": 0.8633377135348226,
+                "specificity": 0.8409425625920471
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.1_lr1e-05_bs32",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.1,
+            "learning_rate": 1e-05,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8085443037974683,
+                "recall": 0.8215434083601286,
+                "f1": 0.8149920255183413,
+                "auroc": 0.910504406481183,
+                "auprc": 0.8819871362625806,
+                "sensitivity": 0.8215434083601286,
+                "specificity": 0.8520782396088019
+            },
+            "effusion": {
+                "precision": 0.8185053380782918,
+                "recall": 0.9067017082785808,
+                "f1": 0.8603491271820449,
+                "auroc": 0.925384977134574,
+                "auprc": 0.9273534167543711,
+                "sensitivity": 0.9067017082785808,
+                "specificity": 0.7746686303387335
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.1_lr1e-05_bs64",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.1,
+            "learning_rate": 1e-05,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8347529812606473,
+                "recall": 0.7877813504823151,
+                "f1": 0.8105872622001654,
+                "auroc": 0.9120610224923154,
+                "auprc": 0.893781038757822,
+                "sensitivity": 0.7877813504823151,
+                "specificity": 0.8814180929095354
+            },
+            "effusion": {
+                "precision": 0.8850889192886456,
+                "recall": 0.8501971090670171,
+                "f1": 0.8672922252010724,
+                "auroc": 0.9339621728637808,
+                "auprc": 0.9339026063056042,
+                "sensitivity": 0.8501971090670171,
+                "specificity": 0.8762886597938144
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.1_lr5e-05_bs16",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.1,
+            "learning_rate": 5e-05,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8494208494208494,
+                "recall": 0.707395498392283,
+                "f1": 0.7719298245614035,
+                "auroc": 0.906036997146204,
+                "auprc": 0.8806650688225107,
+                "sensitivity": 0.707395498392283,
+                "specificity": 0.9046454767726161
+            },
+            "effusion": {
+                "precision": 0.8890449438202247,
+                "recall": 0.8318002628120894,
+                "f1": 0.8594704684317719,
+                "auroc": 0.9376005140124516,
+                "auprc": 0.9452013883514747,
+                "sensitivity": 0.8318002628120894,
+                "specificity": 0.8836524300441826
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.1_lr5e-05_bs32",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.1,
+            "learning_rate": 5e-05,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8341880341880342,
+                "recall": 0.7845659163987139,
+                "f1": 0.8086164043082021,
+                "auroc": 0.9150504327864213,
+                "auprc": 0.8898193600487292,
+                "sensitivity": 0.7845659163987139,
+                "specificity": 0.8814180929095354
+            },
+            "effusion": {
+                "precision": 0.8429447852760736,
+                "recall": 0.9027595269382391,
+                "f1": 0.8718274111675127,
+                "auroc": 0.9347556408802463,
+                "auprc": 0.9400207048740385,
+                "sensitivity": 0.9027595269382391,
+                "specificity": 0.8114874815905744
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.1_lr5e-05_bs64",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.1,
+            "learning_rate": 5e-05,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7865853658536586,
+                "recall": 0.8295819935691319,
+                "f1": 0.8075117370892019,
+                "auroc": 0.9118192753087683,
+                "auprc": 0.8875618967591137,
+                "sensitivity": 0.8295819935691319,
+                "specificity": 0.8288508557457213
+            },
+            "effusion": {
+                "precision": 0.8333333333333334,
+                "recall": 0.9067017082785808,
+                "f1": 0.868470736312146,
+                "auroc": 0.9304709135913329,
+                "auprc": 0.9313089212220249,
+                "sensitivity": 0.9067017082785808,
+                "specificity": 0.7967599410898379
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.1_lr0.0002_bs16",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.1,
+            "learning_rate": 0.0002,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.743849493487699,
+                "recall": 0.8263665594855305,
+                "f1": 0.7829398324447829,
+                "auroc": 0.8955573550106526,
+                "auprc": 0.8572774635313226,
+                "sensitivity": 0.8263665594855305,
+                "specificity": 0.7836185819070904
+            },
+            "effusion": {
+                "precision": 0.8348271446862996,
+                "recall": 0.8567674113009198,
+                "f1": 0.8456549935149157,
+                "auroc": 0.9047625498578531,
+                "auprc": 0.9024343429733221,
+                "sensitivity": 0.8567674113009198,
+                "specificity": 0.8100147275405007
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.1_lr0.0002_bs32",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.1,
+            "learning_rate": 0.0002,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7752293577981652,
+                "recall": 0.815112540192926,
+                "f1": 0.7946708463949843,
+                "auroc": 0.9023400341197652,
+                "auprc": 0.8754937814354491,
+                "sensitivity": 0.815112540192926,
+                "specificity": 0.8202933985330073
+            },
+            "effusion": {
+                "precision": 0.8833819241982507,
+                "recall": 0.7963206307490145,
+                "f1": 0.8375950241879752,
+                "auroc": 0.9237090178607715,
+                "auprc": 0.9317495123834454,
+                "sensitivity": 0.7963206307490145,
+                "specificity": 0.882179675994109
+            }
+        }
+    },
+    {
+        "name": "dp0.1_wd0.1_lr0.0002_bs64",
+        "combo": {
+            "dropout_rate": 0.1,
+            "weight_decay": 0.1,
+            "learning_rate": 0.0002,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8546168958742633,
+                "recall": 0.6993569131832797,
+                "f1": 0.7692307692307693,
+                "auroc": 0.9031262038223571,
+                "auprc": 0.8709988077087572,
+                "sensitivity": 0.6993569131832797,
+                "specificity": 0.9095354523227384
+            },
+            "effusion": {
+                "precision": 0.8378728923476005,
+                "recall": 0.8488830486202366,
+                "f1": 0.8433420365535248,
+                "auroc": 0.9150040931337922,
+                "auprc": 0.9243137949143332,
+                "sensitivity": 0.8488830486202366,
+                "specificity": 0.8159057437407953
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0_lr1e-05_bs16",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0,
+            "learning_rate": 1e-05,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.812206572769953,
+                "recall": 0.8344051446945338,
+                "f1": 0.8231562252180809,
+                "auroc": 0.9196652489406363,
+                "auprc": 0.8924613586062011,
+                "sensitivity": 0.8344051446945338,
+                "specificity": 0.8533007334963325
+            },
+            "effusion": {
+                "precision": 0.8426270136307311,
+                "recall": 0.8935611038107752,
+                "f1": 0.8673469387755102,
+                "auroc": 0.9346550059123044,
+                "auprc": 0.937432907834126,
+                "sensitivity": 0.8935611038107752,
+                "specificity": 0.812960235640648
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0_lr1e-05_bs32",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0,
+            "learning_rate": 1e-05,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8209459459459459,
+                "recall": 0.7813504823151125,
+                "f1": 0.800658978583196,
+                "auroc": 0.9141718881437748,
+                "auprc": 0.8920180932169155,
+                "sensitivity": 0.7813504823151125,
+                "specificity": 0.8704156479217604
+            },
+            "effusion": {
+                "precision": 0.8857545839210155,
+                "recall": 0.8252299605781866,
+                "f1": 0.854421768707483,
+                "auroc": 0.9336912325654756,
+                "auprc": 0.9363158316344704,
+                "sensitivity": 0.8252299605781866,
+                "specificity": 0.8807069219440353
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0_lr5e-05_bs16",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0,
+            "learning_rate": 5e-05,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8098360655737705,
+                "recall": 0.7942122186495176,
+                "f1": 0.801948051948052,
+                "auroc": 0.9124305222525335,
+                "auprc": 0.8904310751527917,
+                "sensitivity": 0.7942122186495176,
+                "specificity": 0.8581907090464548
+            },
+            "effusion": {
+                "precision": 0.8567741935483871,
+                "recall": 0.8725361366622865,
+                "f1": 0.8645833333333334,
+                "auroc": 0.9335189919472673,
+                "auprc": 0.9338916839881568,
+                "sensitivity": 0.8725361366622865,
+                "specificity": 0.8365243004418262
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0_lr5e-05_bs32",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0,
+            "learning_rate": 5e-05,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8462998102466793,
+                "recall": 0.7170418006430869,
+                "f1": 0.7763272410791993,
+                "auroc": 0.9108149435137068,
+                "auprc": 0.8914379463923559,
+                "sensitivity": 0.7170418006430869,
+                "specificity": 0.9009779951100244
+            },
+            "effusion": {
+                "precision": 0.8582474226804123,
+                "recall": 0.8751642575558476,
+                "f1": 0.8666232921275211,
+                "auroc": 0.9345040534603913,
+                "auprc": 0.938859111410123,
+                "sensitivity": 0.8751642575558476,
+                "specificity": 0.8379970544918999
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0_lr0.0002_bs16",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0,
+            "learning_rate": 0.0002,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7701492537313432,
+                "recall": 0.8295819935691319,
+                "f1": 0.7987616099071208,
+                "auroc": 0.8971041439005023,
+                "auprc": 0.8650142920003301,
+                "sensitivity": 0.8295819935691319,
+                "specificity": 0.8117359413202934
+            },
+            "effusion": {
+                "precision": 0.8190709046454768,
+                "recall": 0.8804204993429697,
+                "f1": 0.8486383787207094,
+                "auroc": 0.9138158263969391,
+                "auprc": 0.9246030700592671,
+                "sensitivity": 0.8804204993429697,
+                "specificity": 0.7820324005891016
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0_lr0.0002_bs32",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0,
+            "learning_rate": 0.0002,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7836166924265843,
+                "recall": 0.815112540192926,
+                "f1": 0.7990543735224587,
+                "auroc": 0.9077351237038027,
+                "auprc": 0.8768170140934508,
+                "sensitivity": 0.815112540192926,
+                "specificity": 0.8288508557457213
+            },
+            "effusion": {
+                "precision": 0.7819383259911894,
+                "recall": 0.9329829172141918,
+                "f1": 0.8508088675853804,
+                "auroc": 0.9195210549641101,
+                "auprc": 0.9266987386932314,
+                "sensitivity": 0.9329829172141918,
+                "specificity": 0.7083946980854198
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.01_lr1e-05_bs16",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.01,
+            "learning_rate": 1e-05,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7919254658385093,
+                "recall": 0.819935691318328,
+                "f1": 0.8056872037914692,
+                "auroc": 0.9147261377841021,
+                "auprc": 0.8822551687601674,
+                "sensitivity": 0.819935691318328,
+                "specificity": 0.8361858190709046
+            },
+            "effusion": {
+                "precision": 0.843358395989975,
+                "recall": 0.8843626806833115,
+                "f1": 0.86337395766517,
+                "auroc": 0.9302831906703642,
+                "auprc": 0.9314742052698941,
+                "sensitivity": 0.8843626806833115,
+                "specificity": 0.8159057437407953
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.01_lr1e-05_bs32",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.01,
+            "learning_rate": 1e-05,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8248772504091653,
+                "recall": 0.8102893890675241,
+                "f1": 0.8175182481751825,
+                "auroc": 0.9137375293830926,
+                "auprc": 0.8912736267213616,
+                "sensitivity": 0.8102893890675241,
+                "specificity": 0.8691931540342298
+            },
+            "effusion": {
+                "precision": 0.8746630727762803,
+                "recall": 0.8528252299605782,
+                "f1": 0.863606121091151,
+                "auroc": 0.9337415500494467,
+                "auprc": 0.9369163762697782,
+                "sensitivity": 0.8528252299605782,
+                "specificity": 0.8630338733431517
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.01_lr5e-05_bs16",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.01,
+            "learning_rate": 5e-05,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8862144420131292,
+                "recall": 0.6511254019292605,
+                "f1": 0.7506950880444856,
+                "auroc": 0.8950974457346365,
+                "auprc": 0.8709384475558313,
+                "sensitivity": 0.6511254019292605,
+                "specificity": 0.9364303178484108
+            },
+            "effusion": {
+                "precision": 0.8817934782608695,
+                "recall": 0.8528252299605782,
+                "f1": 0.8670674682698731,
+                "auroc": 0.9287949543175303,
+                "auprc": 0.9305635101451069,
+                "sensitivity": 0.8528252299605782,
+                "specificity": 0.8718703976435935
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.01_lr5e-05_bs32",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.01,
+            "learning_rate": 5e-05,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7704011065006916,
+                "recall": 0.8954983922829582,
+                "f1": 0.8282527881040892,
+                "auroc": 0.922267470656216,
+                "auprc": 0.8959133040351566,
+                "sensitivity": 0.8954983922829582,
+                "specificity": 0.7970660146699267
+            },
+            "effusion": {
+                "precision": 0.8249708284714119,
+                "recall": 0.9290407358738502,
+                "f1": 0.8739184177997528,
+                "auroc": 0.93262488896286,
+                "auprc": 0.9330198089593972,
+                "sensitivity": 0.9290407358738502,
+                "specificity": 0.7790868924889544
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.01_lr0.0002_bs16",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.01,
+            "learning_rate": 0.0002,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.6968253968253968,
+                "recall": 0.7057877813504824,
+                "f1": 0.7012779552715654,
+                "auroc": 0.8013761900643872,
+                "auprc": 0.7514866231467229,
+                "sensitivity": 0.7057877813504824,
+                "specificity": 0.7665036674816625
+            },
+            "effusion": {
+                "precision": 0.6576763485477178,
+                "recall": 0.8331143232588699,
+                "f1": 0.735072463768116,
+                "auroc": 0.7777031616797525,
+                "auprc": 0.7997945619593227,
+                "sensitivity": 0.8331143232588699,
+                "specificity": 0.5139911634756995
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.01_lr0.0002_bs32",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.01,
+            "learning_rate": 0.0002,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8425047438330171,
+                "recall": 0.7138263665594855,
+                "f1": 0.7728459530026109,
+                "auroc": 0.9054945400514156,
+                "auprc": 0.8675240575476023,
+                "sensitivity": 0.7138263665594855,
+                "specificity": 0.8985330073349633
+            },
+            "effusion": {
+                "precision": 0.8116805721096544,
+                "recall": 0.8948751642575559,
+                "f1": 0.85125,
+                "auroc": 0.9209821972871135,
+                "auprc": 0.92786834174345,
+                "sensitivity": 0.8948751642575559,
+                "specificity": 0.7673048600883653
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.1_lr1e-05_bs16",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.1,
+            "learning_rate": 1e-05,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8050713153724247,
+                "recall": 0.8167202572347267,
+                "f1": 0.810853950518755,
+                "auroc": 0.9140185850517694,
+                "auprc": 0.8934077129516905,
+                "sensitivity": 0.8167202572347267,
+                "specificity": 0.8496332518337408
+            },
+            "effusion": {
+                "precision": 0.8753462603878116,
+                "recall": 0.8304862023653088,
+                "f1": 0.8523263654753878,
+                "auroc": 0.9301844909902675,
+                "auprc": 0.9336159338079751,
+                "sensitivity": 0.8304862023653088,
+                "specificity": 0.8674521354933726
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.1_lr1e-05_bs32",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.1,
+            "learning_rate": 1e-05,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8142857142857143,
+                "recall": 0.8247588424437299,
+                "f1": 0.8194888178913738,
+                "auroc": 0.9129297400136794,
+                "auprc": 0.8896156889245477,
+                "sensitivity": 0.8247588424437299,
+                "specificity": 0.8569682151589242
+            },
+            "effusion": {
+                "precision": 0.857516339869281,
+                "recall": 0.8620236530880421,
+                "f1": 0.8597640891218873,
+                "auroc": 0.931705627236467,
+                "auprc": 0.9362135204580782,
+                "sensitivity": 0.8620236530880421,
+                "specificity": 0.8394698085419735
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.1_lr5e-05_bs16",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.1,
+            "learning_rate": 5e-05,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.796583850931677,
+                "recall": 0.8247588424437299,
+                "f1": 0.8104265402843602,
+                "auroc": 0.9086844236196825,
+                "auprc": 0.8699084751806163,
+                "sensitivity": 0.8247588424437299,
+                "specificity": 0.8398533007334963
+            },
+            "effusion": {
+                "precision": 0.8299155609167672,
+                "recall": 0.9040735873850198,
+                "f1": 0.8654088050314466,
+                "auroc": 0.9283788674308473,
+                "auprc": 0.9317285274301401,
+                "sensitivity": 0.9040735873850198,
+                "specificity": 0.792341678939617
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.1_lr5e-05_bs32",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.1,
+            "learning_rate": 5e-05,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8115702479338843,
+                "recall": 0.7893890675241158,
+                "f1": 0.8003259983700082,
+                "auroc": 0.9080240410695053,
+                "auprc": 0.8838644319782619,
+                "sensitivity": 0.7893890675241158,
+                "specificity": 0.8606356968215159
+            },
+            "effusion": {
+                "precision": 0.888283378746594,
+                "recall": 0.8567674113009198,
+                "f1": 0.8722408026755852,
+                "auroc": 0.9320288203065885,
+                "auprc": 0.934037021272792,
+                "sensitivity": 0.8567674113009198,
+                "specificity": 0.8792341678939617
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.1_lr0.0002_bs16",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.1,
+            "learning_rate": 0.0002,
+            "batch_size": 16,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.42248722316865417,
+                "recall": 0.3987138263665595,
+                "f1": 0.41025641025641024,
+                "auroc": 0.5029579635060024,
+                "auprc": 0.4181445200752936,
+                "sensitivity": 0.3987138263665595,
+                "specificity": 0.5855745721271394
+            },
+            "effusion": {
+                "precision": 0.5524412296564195,
+                "recall": 0.8028909329829172,
+                "f1": 0.6545259775040171,
+                "auroc": 0.4961749035742831,
+                "auprc": 0.5035243176383905,
+                "sensitivity": 0.8028909329829172,
+                "specificity": 0.2709867452135493
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.1_lr0.0002_bs32",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.1,
+            "learning_rate": 0.0002,
+            "batch_size": 32,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8156028368794326,
+                "recall": 0.7395498392282959,
+                "f1": 0.7757166947723441,
+                "auroc": 0.9019666035110339,
+                "auprc": 0.8648110114516925,
+                "sensitivity": 0.7395498392282959,
+                "specificity": 0.8728606356968215
+            },
+            "effusion": {
+                "precision": 0.8876755070202809,
+                "recall": 0.7477003942181341,
+                "f1": 0.81169757489301,
+                "auroc": 0.9180057245814456,
+                "auprc": 0.9247287814987457,
+                "sensitivity": 0.7477003942181341,
+                "specificity": 0.8939617083946981
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0_lr1e-05_bs64",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0,
+            "learning_rate": 1e-05,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8211920529801324,
+                "recall": 0.797427652733119,
+                "f1": 0.8091353996737357,
+                "auroc": 0.9196161133342244,
+                "auprc": 0.9003537080295921,
+                "sensitivity": 0.797427652733119,
+                "specificity": 0.8679706601466992
+            },
+            "effusion": {
+                "precision": 0.8673602080624188,
+                "recall": 0.8764783180026281,
+                "f1": 0.8718954248366013,
+                "auroc": 0.9337009090047007,
+                "auprc": 0.9383642394390366,
+                "sensitivity": 0.8764783180026281,
+                "specificity": 0.8497790868924889
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0_lr5e-05_bs64",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0,
+            "learning_rate": 5e-05,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8588469184890656,
+                "recall": 0.6945337620578779,
+                "f1": 0.768,
+                "auroc": 0.9121592937051392,
+                "auprc": 0.8946687112467927,
+                "sensitivity": 0.6945337620578779,
+                "specificity": 0.91320293398533
+            },
+            "effusion": {
+                "precision": 0.9160186625194401,
+                "recall": 0.7739816031537451,
+                "f1": 0.8390313390313391,
+                "auroc": 0.932990658365572,
+                "auprc": 0.9371946974079487,
+                "sensitivity": 0.7739816031537451,
+                "specificity": 0.9204712812960235
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0_lr0.0002_bs64",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0,
+            "learning_rate": 0.0002,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.748221906116643,
+                "recall": 0.8456591639871383,
+                "f1": 0.7939622641509434,
+                "auroc": 0.9008227265937626,
+                "auprc": 0.8732721732388734,
+                "sensitivity": 0.8456591639871383,
+                "specificity": 0.7836185819070904
+            },
+            "effusion": {
+                "precision": 0.85,
+                "recall": 0.871222076215506,
+                "f1": 0.8604802076573653,
+                "auroc": 0.9212918433423194,
+                "auprc": 0.9229452900585471,
+                "sensitivity": 0.871222076215506,
+                "specificity": 0.8276877761413843
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.01_lr1e-05_bs64",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.01,
+            "learning_rate": 1e-05,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8407871198568873,
+                "recall": 0.7556270096463023,
+                "f1": 0.7959356477561389,
+                "auroc": 0.9041580515570091,
+                "auprc": 0.8830613917212935,
+                "sensitivity": 0.7556270096463023,
+                "specificity": 0.89119804400978
+            },
+            "effusion": {
+                "precision": 0.8771428571428571,
+                "recall": 0.8068331143232589,
+                "f1": 0.840520191649555,
+                "auroc": 0.9255146414201915,
+                "auprc": 0.9318166078468328,
+                "sensitivity": 0.8068331143232589,
+                "specificity": 0.8733431516936672
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.01_lr5e-05_bs64",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.01,
+            "learning_rate": 5e-05,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8300180831826401,
+                "recall": 0.7379421221864951,
+                "f1": 0.7812765957446809,
+                "auroc": 0.9082422031619745,
+                "auprc": 0.8839787637155487,
+                "sensitivity": 0.7379421221864951,
+                "specificity": 0.8850855745721271
+            },
+            "effusion": {
+                "precision": 0.8612565445026178,
+                "recall": 0.8646517739816032,
+                "f1": 0.8629508196721312,
+                "auroc": 0.9292729704152547,
+                "auprc": 0.9296466118344039,
+                "sensitivity": 0.8646517739816032,
+                "specificity": 0.8438880706921944
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.01_lr0.0002_bs64",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.01,
+            "learning_rate": 0.0002,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8153078202995009,
+                "recall": 0.7877813504823151,
+                "f1": 0.8013082583810303,
+                "auroc": 0.9062531938144169,
+                "auprc": 0.878432401745405,
+                "sensitivity": 0.7877813504823151,
+                "specificity": 0.8643031784841075
+            },
+            "effusion": {
+                "precision": 0.8804500703234881,
+                "recall": 0.8226018396846255,
+                "f1": 0.8505434782608695,
+                "auroc": 0.9264455148736548,
+                "auprc": 0.9311945655732159,
+                "sensitivity": 0.8226018396846255,
+                "specificity": 0.8748159057437408
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.1_lr1e-05_bs64",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.1,
+            "learning_rate": 1e-05,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.8422939068100358,
+                "recall": 0.7556270096463023,
+                "f1": 0.7966101694915254,
+                "auroc": 0.9144431166911691,
+                "auprc": 0.8926766358664673,
+                "sensitivity": 0.7556270096463023,
+                "specificity": 0.8924205378973105
+            },
+            "effusion": {
+                "precision": 0.8802816901408451,
+                "recall": 0.8212877792378449,
+                "f1": 0.849762066621346,
+                "auroc": 0.9326500477048454,
+                "auprc": 0.9379553108114438,
+                "sensitivity": 0.8212877792378449,
+                "specificity": 0.8748159057437408
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.1_lr5e-05_bs64",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.1,
+            "learning_rate": 5e-05,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.830122591943958,
+                "recall": 0.7620578778135049,
+                "f1": 0.7946353730092205,
+                "auroc": 0.9083778174356717,
+                "auprc": 0.8816241113148252,
+                "sensitivity": 0.7620578778135049,
+                "specificity": 0.8814180929095354
+            },
+            "effusion": {
+                "precision": 0.8571428571428571,
+                "recall": 0.8830486202365309,
+                "f1": 0.8699029126213592,
+                "auroc": 0.9310437587934641,
+                "auprc": 0.9364785810942293,
+                "sensitivity": 0.8830486202365309,
+                "specificity": 0.8350515463917526
+            }
+        }
+    },
+    {
+        "name": "dp0.2_wd0.1_lr0.0002_bs64",
+        "combo": {
+            "dropout_rate": 0.2,
+            "weight_decay": 0.1,
+            "learning_rate": 0.0002,
+            "batch_size": 64,
+            "num_epochs": 20,
+            "patience": 3
+        },
+        "metrics": {
+            "edema": {
+                "precision": 0.7962962962962963,
+                "recall": 0.8295819935691319,
+                "f1": 0.8125984251968504,
+                "auroc": 0.9117603125810738,
+                "auprc": 0.8850397275295506,
+                "sensitivity": 0.8295819935691319,
+                "specificity": 0.8386308068459658
+            },
+            "effusion": {
+                "precision": 0.8603723404255319,
+                "recall": 0.8501971090670171,
+                "f1": 0.8552544613350959,
+                "auroc": 0.9259481458974801,
+                "auprc": 0.9282902376405271,
+                "sensitivity": 0.8501971090670171,
+                "specificity": 0.845360824742268
+            }
+        }
+    }
+]

@@ -118,11 +118,22 @@ class FusionModel(nn.Module):
             nn.Linear(hidden_dim, 2),
         )
 
-    def forward(self, pixel_values, input_ids, attention_mask):
+    def forward(
+        self,
+        pixel_values,
+        input_ids,
+        attention_mask,
+        disable_image=False,
+        disable_text=False,
+    ):
         img_out = self.image_model(pixel_values=pixel_values).pooler_output
         txt_out = self.text_model(
             input_ids=input_ids, attention_mask=attention_mask
         ).pooler_output
+        if disable_image:
+            img_out = torch.zeros_like(img_out)
+        if disable_text:
+            txt_out = torch.zeros_like(txt_out)
         fusion = torch.cat(
             [self.vision_dropout(img_out), self.text_dropout(txt_out)], dim=1
         )
@@ -198,7 +209,7 @@ def validate_epoch(model, loader, criterion):
     return avg_loss
 
 
-def evaluate(model, loader):
+def evaluate(model, loader, disable_image=False, disable_text=False):
     model.eval()
     all_labels, all_preds, all_probs = [], [], []
     with torch.no_grad():
@@ -207,7 +218,17 @@ def evaluate(model, loader):
             input_ids = batch["input_ids"].to(device)
             attention_mask = batch["attention_mask"].to(device)
             labels = batch["labels"].cpu().numpy()
-            logits = model(pixel_values, input_ids, attention_mask).cpu().numpy()
+            logits = (
+                model(
+                    pixel_values,
+                    input_ids,
+                    attention_mask,
+                    disable_image=disable_image,
+                    disable_text=disable_text,
+                )
+                .cpu()
+                .numpy()
+            )
             probs = torch.sigmoid(torch.tensor(logits)).numpy()
             preds = (probs > 0.5).astype(int)
             all_labels.append(labels)
@@ -238,6 +259,7 @@ for vision_drop in [0.1, 0.2]:
                     )
 
 results_file = "concatenation_fusion_results.json"
+# results_file = "../ablation_study_results.json" # Use this for ablation study
 if not os.path.exists(results_file):
     with open(results_file, "w") as f:
         json.dump([], f)
@@ -305,10 +327,30 @@ def execute_hyperparameter_combo(combo):
 
     test_metrics = evaluate(model, test_loader)
     print(f"Test Metrics for {name}: {test_metrics}")
+    data = {
+        "name": name,
+        "combo": combo,
+        "metrics": test_metrics,
+    }
+
+    # # Ablation study
+    # fusion_metrics = evaluate(model, test_loader)
+    # text_only_metrics = evaluate(model, test_loader, disable_image=True)
+    # vision_only_metrics = evaluate(model, test_loader, disable_text=True)
+
+    # data = {
+    #     "name": name,
+    #     "combo": combo,
+    #     "metrics": {
+    #         "fusion": fusion_metrics,
+    #         "text_only": text_only_metrics,
+    #         "vision_only": vision_only_metrics,
+    #     },
+    # }
 
     with open(results_file, "r") as f:
         results = json.load(f)
-    results.append({"name": name, "combo": combo, "metrics": test_metrics})
+    results.append(data)
     with open(results_file, "w") as f:
         json.dump(results, f, indent=4)
     print(f"Saved results for {name}\n")
@@ -317,3 +359,38 @@ def execute_hyperparameter_combo(combo):
 # execute_hyperparameter_combo(hyperparameter_combinations[0])
 for combo in hyperparameter_combinations:
     execute_hyperparameter_combo(combo)
+
+# # Execute only the required hyperparameter combinations for ablation study
+# required_combos = [
+#     {
+#         "vision_drop": 0.1,
+#         "text_drop": 0.2,
+#         "learning_rate": 0.0002,
+#         "weight_decay": 0.1,
+#         "batch_size": 16,
+#         "num_epochs": 20,
+#     },
+#     {
+#         "vision_drop": 0.1,
+#         "text_drop": 0.1,
+#         "learning_rate": 0.0002,
+#         "weight_decay": 0.1,
+#         "batch_size": 16,
+#         "num_epochs": 20,
+#     },
+#     {
+#         "vision_drop": 0.1,
+#         "text_drop": 0.1,
+#         "learning_rate": 0.0002,
+#         "weight_decay": 0.01,
+#         "batch_size": 16,
+#         "num_epochs": 20,
+#     },
+# ]
+# for combo in required_combos:
+#     try:
+#         execute_hyperparameter_combo(combo)
+#     except Exception as e:
+#         print(f"Error executing combo {combo}: {e}")
+#         continue
+# print("All hyperparameter combinations executed.")
